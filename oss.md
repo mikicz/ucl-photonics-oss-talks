@@ -9,12 +9,16 @@ fonts:
 ---
 
 # **Good practices for making reproducible open source code** 
+## UCL Photonics Society Transferable Skills Workshop Series
 
 ---
 
-# Workshop Intruction
-
-...
+# Why this workshop?
+- As a student or researcher, you produce code for your projects
+- Reproducibility and readability are key aspects of good scientific research
+- However, there is a huge software engineerings kill gap between accademia and industry
+- This workshop aims at teaching you good software engineering practices
+- These skills will improve the quality of your projects, and foster collaboration
 
 --- 
 
@@ -40,8 +44,8 @@ fonts:
 - Quite common for
   - operating systems
   - projects
-
 ---
+
 
 # OSS Licenses
 
