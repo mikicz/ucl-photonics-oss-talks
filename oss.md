@@ -16,7 +16,7 @@ fonts:
 # Why this workshop?
 - As a student or researcher, you produce code for your projects
 - Reproducibility and readability are key aspects of good scientific research
-- However, there is a huge software engineerings kill gap between accademia and industry
+- However, there is a huge software engineerings skill gap between accademia and industry
 - This workshop aims at teaching you good software engineering practices
 - These skills will improve the quality of your projects, and foster collaboration
 
@@ -44,8 +44,18 @@ fonts:
 - Quite common for
   - operating systems
   - projects
+ 
 ---
 
+# Successes of open source in research
+
+- Opensource has allowed for successful international research collaborations
+- In AI -> PyTorch, Tensorflow, Gymnasium (RL), Llama...
+- In Neuroscience -> Fruit Fly Brain Observatory
+- In Biochemistry -> alphafold
+- *TBD: more examples?*
+
+---
 
 # OSS Licenses
 
