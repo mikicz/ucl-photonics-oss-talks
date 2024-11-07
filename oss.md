@@ -254,6 +254,14 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 
 ---
 
+# Dependency management with virtual environments (Python)
+## What about non-python projects?
+
+*TBD: add tips or tool name for Matlab, C, C++...*
+
+---
+
+
 
 # Testing
 
