@@ -57,6 +57,11 @@ fonts:
 
 ---
 
+# Intro to GitHub
+
+
+---
+
 # OSS Licenses
 
 - Define the conditions under which the software is shared
@@ -252,7 +257,5 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 
 # Linting and formatting
 
----
 
-# Intro to GitHub
 
