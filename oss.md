@@ -14,9 +14,11 @@ fonts:
 ---
 
 # Why this workshop?
+
 - As a student or researcher, you produce code for your projects
 - Reproducibility and readability are key aspects of good scientific research
-- However, there is a huge software engineerings skill gap between accademia and industry
+- Reproducibility and readability are key aspects of working in a team
+- There is a software engineering skill gap between accademia and industry
 - This workshop aims at teaching you good software engineering practices
 - These skills will improve the quality of your projects, and foster collaboration
 
@@ -59,6 +61,20 @@ fonts:
 
 # Intro to GitHub
 
+- GitHub is the most popular platform for working with git
+  - Other popular choices are GitLab and BitBucket
+- Git is a distributed version control system
+- Provides access control, issue tracking, wiki, CI and other functionality
+- Most features are free public repositories
+
+--- 
+
+# Intro to GitHub
+
+- *Repository* - a collection of files, main unit on GitHub
+- *Commit* - a change to some number of files
+- *Branch* - collection of commits
+- *Pull Request* - a request to merge one branch into another one
 
 ---
 
@@ -71,15 +87,108 @@ fonts:
 - Testing
 - OSS Licenses
 
+---
+
+# Linting
+
+- Linting is analysing and finding issues in code using static code analysis
+- Linters are tools which read the code (without execution) and raise issues
+- Ranges from basic to quite sofisticated
+  - Check no line has training spaces
+  - Check all used code is imported
+  - Checking for inefficient code
+- Better linters even fix the issue for you
 
 ---
 
-# Linting and formatting
+# Linting
+## Reasons to use linters
+
+- Enforce ways of doing things
+- Keeping the codebase consistent
+- Reduce bugs
+- Make pull requests easier
+- Make the code faster
+- Use latest Python features
+- Prevent silly mistakes
+---
+
+# Linting
+## Linters and linting utils
+
+- `pre-commit` - tool for running linters before commiting new code
+- `ruff` - new linter which implements most standard Python linters very fast
+- `nbQA` - tool for running linters on jupyter notebooks
+
+--- 
+
+# Formatting
+
+<img src="https://i.imgur.com/vOWAAUK.png" alt="Python Environment" style="max-width: 75%; margin: 0 auto;">
+
+---
+
+# Formatting
+
+- Each code has some formatting
+- Each programmer writes slightly differently
+- When collaborating, common formatting is important
+  - for the code to work correctly
+  - for pull requests to be readable
+  - for new collaborators to be able to read all code easily
+  - *TBD*
+- Modern way of doing things is to have automated formatters
+
+---
+
+# Formatting
+## Automatic formatting
+
+- Forever removes the arguments over tiny details
+- Should be run before every commit
+- Should be enforced on GitHub through CI
+- In Python, very popular choice is `black`
+  - The only configuration is line length
+- Currently, I would reccommend `ruff format` - compatible with `black` but faster
+
+---
+
+# Formatting
+## Example - bad
+
+```python
+if (__name__ == "__main__"):
+
+    for name, position in [
+        ("Mikuláš", "Staff Engineer"),
+        (
+            "Robert", "VP of Engineering"
+        ),
+("Rob", "Senion Engineer")
+                ]:
+        print(
+          name, position
+        )
+```
+
+---
+
+# Formatting
+## Example - ruff reformatted
+
+```python
+if __name__ == "__main__":
+    for name, position in [
+        ("Mikuláš", "Staff Engineer"),
+        ("Robert", "VP of Engineering"),
+        ("Rob", "Senion Engineer"),
+    ]:
+        print(name, position)
+```
 
 ---
 
 # Library vs project
-
 
 ---
 
@@ -97,7 +206,7 @@ fonts:
 # Dependency management with virtual environments
 ## Python environments
 
-<img src="https://imgs.xkcd.com/comics/python_environment_2x.png" alt="Python Environment" style="max-width: 50%; margin: 0 auto;">
+<img src="https://imgs.xkcd.com/comics/python_environment_2x.png" alt="Python Environment" style="max-width: 45%; margin: 0 auto;">
 
 ---
 
@@ -144,8 +253,8 @@ fonts:
 ## Defining dependencies - level 1
 
 > (Not an actual recommendation!)
-> 
-> Just include it in the README, awful, but better than nothing.
+
+Just include it in the README, awful, but better than nothing.
 
 ```markdown
 -- README.md 
@@ -179,7 +288,7 @@ $ pip install -r requirements.txt
 ## Issues with requirements.txt
 
 - Ok, but what version of `pandas`?
-  - Versions of libraries can have significant differences between versions?
+  - Versions of libraries can have significant differences between versions
   - Even `pandas<2` or `pandas>2` can eventually break
 - What about the dependencies of `pandas`?
   - A dependency of `pandas` can break `pandas` itself 
@@ -230,7 +339,7 @@ $ pip install -r requirements.txt
 pandas = "^2.2.3"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "pytest>8"
+pytest = ">8"
 ```
 
 ---
