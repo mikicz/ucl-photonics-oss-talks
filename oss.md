@@ -63,6 +63,7 @@ fonts:
 ---
 
 # How to structure a good opensource project on Github?
+
 - Linting and formatting
 - Library vs project
 - Good repository structure
@@ -72,6 +73,7 @@ fonts:
 
 
 ---
+
 # Linting and formatting
 
 ---
@@ -84,19 +86,22 @@ fonts:
 # Good repository structure
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Python environments
 
 - ... can be a mess
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Python environments
 
 <img src="https://imgs.xkcd.com/comics/python_environment_2x.png" alt="Python Environment" style="max-width: 50%; margin: 0 auto;">
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Python environments
 
 - ... can be a mess
@@ -104,7 +109,8 @@ fonts:
 - *In general*, the default is the "global environment"
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Problems with global environment
 
 - The system itself uses Python from global environment
@@ -113,7 +119,8 @@ fonts:
 - Solution -> "virtual environments"
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Virtual environments
 
 - A way to separate dependencies between projects
@@ -124,14 +131,16 @@ fonts:
 - `source venv/bin/activate` or `venv\Scripts\activate` (Windows)
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Defining dependencies
 
 - Your project/libraries have dependencies
 - To allow reproducibility, those need to be defined
 
 --- 
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Defining dependencies - level 1
 
 > (Not an actual recommendation!)
@@ -147,7 +156,8 @@ To run this program, install `pandas`.
 ```
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Defining dependencies - level 2
 
 Define `requirements.txt`
@@ -164,7 +174,8 @@ $ pip install -r requirements.txt
 ```
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Issues with requirements.txt
 
 - Ok, but what version of `pandas`?
@@ -177,7 +188,8 @@ $ pip install -r requirements.txt
   - `pip freeze > requirements-all.txt`
 
 --- 
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Issues with requirements.txt
 
 - What if I need some dependencies just for tests?
@@ -187,7 +199,8 @@ $ pip install -r requirements.txt
 - -> Not fit for purpose anymore 
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Defining dependencies - level 3
 
 - Using a dependency manager
@@ -202,7 +215,8 @@ $ pip install -r requirements.txt
   - Install Python
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Using poetry
 
 - `poetry add pandas`
@@ -220,7 +234,8 @@ pytest = "pytest>8"
 ```
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Using poetry
 
 ```toml
@@ -246,7 +261,8 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 ```
 
 ---
-# Dependency management with virtual environments (Python)
+
+# Dependency management with virtual environments
 ## Defining dependencies - level 3
 
 - Easier dependency management
@@ -254,14 +270,12 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 
 ---
 
-# Dependency management with virtual environments (Python)
+# Dependency management with virtual environments
 ## What about non-python projects?
 
 *TBD: add tips or tool name for Matlab, C, C++...*
 
 ---
-
-
 
 # Testing
 
