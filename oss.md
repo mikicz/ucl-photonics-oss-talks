@@ -286,10 +286,9 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 - Define the conditions under which the software is shared
 - Differ in restrictiveness
 - Copyleft vs permissive
-- Copyleft requires keeping same license for derivitive work ???????? (e.g. GNU)
-- Permissive lets you do lot more (MIT, Apache ????????)
-- Stats??? 
-
----
-
+  - Copyleft requires keeping same license for derivitive work (e.g. GPL, AGPL)
+  - Permissive lets you do lot more (MIT, Apache, BSD)
+- Packages in Python ecosystem primarily use permissive (~70%)
+  - MIT is the most popular choice
+- https://choosealicense.com/ 
 
