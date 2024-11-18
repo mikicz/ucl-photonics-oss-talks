@@ -9,12 +9,16 @@ fonts:
 ---
 
 # **Good practices for making reproducible open source code** 
+## UCL Photonics Society Transferable Skills Workshop Series
 
 ---
 
-# Workshop Intruction
-
-...
+# Why this workshop?
+- As a student or researcher, you produce code for your projects
+- Reproducibility and readability are key aspects of good scientific research
+- However, there is a huge software engineerings skill gap between accademia and industry
+- This workshop aims at teaching you good software engineering practices
+- These skills will improve the quality of your projects, and foster collaboration
 
 --- 
 
@@ -40,17 +44,35 @@ fonts:
 - Quite common for
   - operating systems
   - projects
+ 
+---
+
+# Successes of open source in research
+
+- Opensource has allowed for successful international research collaborations
+- In AI -> PyTorch, Tensorflow, Gymnasium (RL), Llama...
+- In Neuroscience -> Fruit Fly Brain Observatory
+- In Biochemistry -> alphafold
+- *TBD: more examples?*
 
 ---
 
-# OSS Licenses
+# Intro to GitHub
 
-- Define the conditions under which the software is shared
-- Differ in restrictiveness
-- Copyleft vs permissive
-- Copyleft requires keeping same license for derivitive work ???????? (e.g. GNU)
-- Permissive lets you do lot more (MIT, Apache ????????)
-- Stats??? 
+
+---
+
+# How to structure a good opensource project on Github?
+- Linting and formatting
+- Library vs project
+- Good repository structure
+- Dependency management with virtual environments (Python)
+- Testing
+- OSS Licenses
+
+
+---
+# Linting and formatting
 
 ---
 
@@ -59,27 +81,31 @@ fonts:
 
 ---
 
-# Python environments
+# Good repository structure
+
+---
+# Dependency management with virtual environments (Python)
+## Python environments
 
 - ... can be a mess
 
 ---
-
-# Python environments
+# Dependency management with virtual environments (Python)
+## Python environments
 
 <img src="https://imgs.xkcd.com/comics/python_environment_2x.png" alt="Python Environment" style="max-width: 50%; margin: 0 auto;">
 
 ---
-
-# Python environments
+# Dependency management with virtual environments (Python)
+## Python environments
 
 - ... can be a mess
 - *In general*, Python packages belong to an environment
 - *In general*, the default is the "global environment"
 
 ---
-
-# Problems with global environment
+# Dependency management with virtual environments (Python)
+## Problems with global environment
 
 - The system itself uses Python from global environment
 - Different things you install need different dependencies
@@ -87,8 +113,8 @@ fonts:
 - Solution -> "virtual environments"
 
 ---
-
-# Virtual environments
+# Dependency management with virtual environments (Python)
+## Virtual environments
 
 - A way to separate dependencies between projects
 - **Absolutely** the way to go
@@ -98,15 +124,15 @@ fonts:
 - `source venv/bin/activate` or `venv\Scripts\activate` (Windows)
 
 ---
-
-# Defining dependencies
+# Dependency management with virtual environments (Python)
+## Defining dependencies
 
 - Your project/libraries have dependencies
 - To allow reproducibility, those need to be defined
 
 --- 
-
-# Defining dependencies - level 1
+# Dependency management with virtual environments (Python)
+## Defining dependencies - level 1
 
 > (Not an actual recommendation!)
 > 
@@ -121,8 +147,8 @@ To run this program, install `pandas`.
 ```
 
 ---
-
-# Defining dependencies - level 2
+# Dependency management with virtual environments (Python)
+## Defining dependencies - level 2
 
 Define `requirements.txt`
 
@@ -138,8 +164,8 @@ $ pip install -r requirements.txt
 ```
 
 ---
-
-# Issues with requirements.txt
+# Dependency management with virtual environments (Python)
+## Issues with requirements.txt
 
 - Ok, but what version of `pandas`?
   - Versions of libraries can have significant differences between versions?
@@ -151,8 +177,8 @@ $ pip install -r requirements.txt
   - `pip freeze > requirements-all.txt`
 
 --- 
-
-# Issues with requirements.txt
+# Dependency management with virtual environments (Python)
+## Issues with requirements.txt
 
 - What if I need some dependencies just for tests?
   - `requirements-test.txt`
@@ -161,8 +187,8 @@ $ pip install -r requirements.txt
 - -> Not fit for purpose anymore 
 
 ---
-
-# Defining dependencies - level 3
+# Dependency management with virtual environments (Python)
+## Defining dependencies - level 3
 
 - Using a dependency manager
   - `poetry` / `pipenv` / `uv`
@@ -176,8 +202,8 @@ $ pip install -r requirements.txt
   - Install Python
 
 ---
-
-# Using poetry
+# Dependency management with virtual environments (Python)
+## Using poetry
 
 - `poetry add pandas`
 - `poetry add 'pytest>8' --dev`
@@ -194,8 +220,8 @@ pytest = "pytest>8"
 ```
 
 ---
-
-# Using poetry
+# Dependency management with virtual environments (Python)
+## Using poetry
 
 ```toml
 [[package]]
@@ -220,25 +246,36 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 ```
 
 ---
-
-# Defining dependencies - level 3
+# Dependency management with virtual environments (Python)
+## Defining dependencies - level 3
 
 - Easier dependency management
 - Easier to produce reproducable builds
 
 ---
 
-# Repository structure
+# Dependency management with virtual environments (Python)
+## What about non-python projects?
+
+*TBD: add tips or tool name for Matlab, C, C++...*
 
 ---
+
+
 
 # Testing
 
 ---
 
-# Linting and formatting
+# OSS Licenses
+
+- Define the conditions under which the software is shared
+- Differ in restrictiveness
+- Copyleft vs permissive
+- Copyleft requires keeping same license for derivitive work ???????? (e.g. GNU)
+- Permissive lets you do lot more (MIT, Apache ????????)
+- Stats??? 
 
 ---
 
-# Intro to GitHub
 
