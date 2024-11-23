@@ -59,11 +59,14 @@ fonts:
 
 ---
 
-# Intro to GitHub
+# How to share open source
 
+- Installable libraries are most commonly shared in repositories
+  - For example PyPI for Python, npmjs for JavaScript
+- Source code is most commonly shared using git
+- Git is a distributed version control system
 - GitHub is the most popular platform for working with git
   - Other popular choices are GitLab and BitBucket
-- Git is a distributed version control system
 - Provides access control, issue tracking, wiki, CI and other functionality
 - Most features are free public repositories
 
@@ -104,13 +107,14 @@ fonts:
 # Linting
 ## Reasons to use linters
 
-- Enforce ways of doing things
-- Keeping the codebase consistent
-- Reduce bugs
-- Make pull requests easier
-- Make the code faster
-- Use latest Python features
-- Prevent silly mistakes
+- To enforce standard ways of doing things
+- to keep the codebase consistent
+- to reduce bugs
+- to make pull requests easier
+- to make the code faster
+- to use latest language features
+- to prevent silly mistakes
+
 ---
 
 # Linting
@@ -137,7 +141,7 @@ fonts:
   - for pull requests to be readable
   - for new collaborators to be able to read all code easily
   - *TBD*
-- Modern way of doing things is to have automated formatters
+- Modern way of doing things is to use automated formatters
 
 ---
 
@@ -159,15 +163,15 @@ fonts:
 ```python
 if (__name__ == "__main__"):
 
-    for name, position in [
-        ("Mikuláš", "Staff Engineer"),
+    for (library, purpose) in [
+        ("pandas", "dataframes"),
         (
-            "Robert", "VP of Engineering"
+            "numpy", "multi-dimensional arrays"
         ),
-("Rob", "Senion Engineer")
+("tensorflow", "deep learning")
                 ]:
         print(
-          name, position
+          library, purpose
         )
 ```
 
@@ -178,12 +182,12 @@ if (__name__ == "__main__"):
 
 ```python
 if __name__ == "__main__":
-    for name, position in [
-        ("Mikuláš", "Staff Engineer"),
-        ("Robert", "VP of Engineering"),
-        ("Rob", "Senion Engineer"),
+    for library, purpose in [
+        ("pandas", "dataframes"),
+        ("numpy", "multi-dimensional arrays"),
+        ("tensorflow", "deep learning"),
     ]:
-        print(name, position)
+        print(library, purpose)
 ```
 
 ---
