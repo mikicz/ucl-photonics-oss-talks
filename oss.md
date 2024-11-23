@@ -214,6 +214,8 @@ if __name__ == "__main__":
 
 # Good repository structure
 
+
+
 ---
 
 # Dependency management with virtual environments
@@ -420,4 +422,10 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 - Packages in Python ecosystem primarily use permissive (~70%)
   - MIT is the most popular choice
 - https://choosealicense.com/ 
+
+---
+layout: section
+---
+
+# Workshop
 
