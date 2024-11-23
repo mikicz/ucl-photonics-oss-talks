@@ -138,9 +138,8 @@ fonts:
 - Each programmer writes slightly differently
 - When collaborating, common formatting is important
   - for the code to work correctly
-  - for pull requests to be readable
-  - for new collaborators to be able to read all code easily
-  - *TBD*
+  - for pull requests to be readable and easier to manage
+  - for new collaborators to be able to read code easily
 - Modern way of doing things is to use automated formatters
 
 ---
