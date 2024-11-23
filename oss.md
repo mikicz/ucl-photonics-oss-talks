@@ -214,7 +214,60 @@ if __name__ == "__main__":
 
 # Good repository structure
 
+- Important to make collaboration easier
+  - Easier for new collaborators to explore and navigate
+  - Easier to decide where new code should go
+  - Easier to maintain long term
+- Can make publishing and testing easier
 
+---
+
+# Good repository structure
+
+- Root of the repository should contain
+  - README, LICENSE
+  - configuration files
+  - few core folders
+  - TBD main entry point
+
+---
+
+# Good repository structure
+## README
+
+- The first thing most people see
+- Usually written in Markdown
+- Should contain
+  - What does it do
+  - How to install it
+  - Basic usage
+  - Typical development tasks
+- Larger projects have dedicated READMEs for changelog and contributing
+
+---
+
+# Good repository structure
+## Configuration files
+
+- Version control configuration)
+  - `.gitignore`
+- Dependency management files
+  - `requirements.txt`, `pyproject.toml`
+- Code style & linting configuration
+  - `.pre-commit-config.yaml`, `pyproject.toml`
+- CI & Github configuration
+  - `.github`
+
+---
+
+# Good repository structure
+## Core folders
+
+- primary source code, usually `src/` or `lib/`
+  - for python packages often the name of the package, e.g. `pandas`
+- tests, usually `tests/`
+- documentation, usually `docs/` or `examples/`
+- publishing / deployment, `scripts/` or `dist/` or `build/`
 
 ---
 
