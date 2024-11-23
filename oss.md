@@ -194,6 +194,23 @@ if __name__ == "__main__":
 
 # Library vs project
 
+- Library is some code which provides specific funcionality
+  - Used as components while building other software
+  - For example Pandas, Numpy, Tensorflow, etc.
+- Project is standalone piece of software designed
+  - Used directly by end user 
+  - For example Firefox, Blender, VLC media player, etc.
+- Libraries often use more libraries
+- Projects usually use many libraries
+
+---
+
+# Library vs project
+
+- Both libraries and projects can be open source
+- Similar principles apply for sharing and collaborating
+- Major diffences come when it comes to publishing
+
 ---
 
 # Good repository structure
