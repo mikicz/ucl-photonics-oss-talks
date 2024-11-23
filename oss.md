@@ -62,11 +62,11 @@ fonts:
 # How to share open source
 
 - Installable libraries are most commonly shared in repositories
-  - For example PyPI for Python, npmjs for JavaScript
+  - tor example PyPI for Python, npmjs for JavaScript
 - Source code is most commonly shared using git
 - Git is a distributed version control system
 - GitHub is the most popular platform for working with git
-  - Other popular choices are GitLab and BitBucket
+  - other popular choices are GitLab and BitBucket
 - Provides access control, issue tracking, wiki, CI and other functionality
 - Most features are free public repositories
 
@@ -97,9 +97,9 @@ fonts:
 - Linting is analysing and finding issues in code using static code analysis
 - Linters are tools which read the code (without execution) and raise issues
 - Ranges from basic to quite sofisticated
-  - Check no line has training spaces
-  - Check all used code is imported
-  - Checking for inefficient code
+  - check no line has training spaces
+  - check all used code is imported
+  - check for inefficient code
 - Better linters even fix the issue for you
 
 ---
@@ -108,12 +108,12 @@ fonts:
 ## Reasons to use linters
 
 - To enforce standard ways of doing things
-- to keep the codebase consistent
-- to reduce bugs
-- to make pull requests easier
-- to make the code faster
-- to use latest language features
-- to prevent silly mistakes
+- To keep the codebase consistent
+- To reduce bugs
+- To make pull requests easier
+- To make the code faster
+- To use latest language features
+- To prevent silly mistakes
 
 ---
 
@@ -151,7 +151,7 @@ fonts:
 - Should be run before every commit
 - Should be enforced on GitHub through CI
 - In Python, very popular choice is `black`
-  - The only configuration is line length
+  - the only configuration is line length
 - Currently, I would reccommend `ruff format` - compatible with `black` but faster
 
 ---
@@ -194,11 +194,11 @@ if __name__ == "__main__":
 # Library vs project
 
 - Library is some code which provides specific funcionality
-  - Used as components while building other software
-  - For example Pandas, Numpy, Tensorflow, etc.
+  - used as components while building other software
+  - for example Pandas, Numpy, Tensorflow, etc.
 - Project is standalone piece of software designed
-  - Used directly by end user 
-  - For example Firefox, Blender, VLC media player, etc.
+  - used directly by end user 
+  - for example Firefox, Blender, VLC media player, etc.
 - Libraries often use more libraries
 - Projects usually use many libraries
 
@@ -215,9 +215,9 @@ if __name__ == "__main__":
 # Good repository structure
 
 - Important to make collaboration easier
-  - Easier for new collaborators to explore and navigate
-  - Easier to decide where new code should go
-  - Easier to maintain long term
+  - easier for new collaborators to explore and navigate
+  - easier to decide where new code should go
+  - easier to maintain long term
 - Can make publishing and testing easier
 
 ---
@@ -238,10 +238,10 @@ if __name__ == "__main__":
 - The first thing most people see
 - Usually written in Markdown
 - Should contain
-  - What does it do
-  - How to install it
-  - Basic usage
-  - Typical development tasks
+  - what does it do
+  - how to install it
+  - basic usage
+  - typical development tasks
 - Larger projects have dedicated READMEs for changelog and contributing
 
 ---
@@ -263,11 +263,11 @@ if __name__ == "__main__":
 # Good repository structure
 ## Core folders
 
-- primary source code, usually `src/` or `lib/`
+- Primary source code, usually `src/` or `lib/`
   - for python packages often the name of the package, e.g. `pandas`
-- tests, usually `tests/`
-- documentation, usually `docs/` or `examples/`
-- publishing / deployment, `scripts/` or `dist/` or `build/`
+- Tests, usually `tests/`
+- Documentation, usually `docs/` or `examples/`
+- Publishing / deployment, `scripts/` or `dist/` or `build/`
 
 ---
 
@@ -363,12 +363,12 @@ $ pip install -r requirements.txt
 ## Issues with requirements.txt
 
 - Ok, but what version of `pandas`?
-  - Versions of libraries can have significant differences between versions
-  - Even `pandas<2` or `pandas>2` can eventually break
+  - versions of libraries can have significant differences between versions
+  - even `pandas<2` or `pandas>2` can eventually break
 - What about the dependencies of `pandas`?
-  - A dependency of `pandas` can break `pandas` itself 
-  - If not listed what version should be installed?
-  - Transitive dependencies can be silently updated changing dependencies.
+  - a dependency of `pandas` can break `pandas` itself 
+  - if not listed what version should be installed?
+  - transitive dependencies can be silently updated changing dependencies.
   - `pip freeze > requirements-all.txt`
 
 --- 
@@ -390,13 +390,13 @@ $ pip install -r requirements.txt
 - Using a dependency manager
   - `poetry` / `pipenv` / `uv`
 - Usual features
-  - Define top-level dependencies
-  - Split dependencies into groups
-  - All (including transitive) dependencies and versions in a lock file
+  - define top-level dependencies
+  - split dependencies into groups
+  - all (including transitive) dependencies and versions in a lock file
 - They often do extra stuff
-  - Manage virtual envs
-  - Make publishing easier
-  - Install Python
+  - manage virtual envs
+  - make publishing easier
+  - install Python
 
 ---
 
@@ -470,8 +470,8 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 - Define the conditions under which the software is shared
 - Differ in restrictiveness
 - Copyleft vs permissive
-  - Copyleft requires keeping same license for derivitive work (e.g. GPL, AGPL)
-  - Permissive lets you do lot more (MIT, Apache, BSD)
+  - copyleft requires keeping same license for derivitive work (e.g. GPL, AGPL)
+  - permissive lets you do lot more (MIT, Apache, BSD)
 - Packages in Python ecosystem primarily use permissive (~70%)
   - MIT is the most popular choice
 - https://choosealicense.com/ 
