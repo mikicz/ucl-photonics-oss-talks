@@ -6,6 +6,8 @@ highlighter: shiki
 favicon: '/favicon.png'
 fonts:
   sans: "Barlow"
+addons:
+  - slidev-component-progress
 ---
 
 # **Good practices for making reproducible open source code** 
