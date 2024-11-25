@@ -17,16 +17,21 @@ addons:
 
 # Why this workshop?
 
+<v-clicks>
+
 - As a student or researcher, you produce code for your projects
 - Reproducibility and readability are key aspects of good scientific research
 - Reproducibility and readability are key aspects of working in a team
 - There is a software engineering skill gap between accademia and industry
 - This workshop aims at teaching you good software engineering practices
 - These skills will improve the quality of your projects, and foster collaboration
+</v-clicks>
 
 --- 
 
 # Who am I?
+
+<v-clicks>
 
 - Mikuláš Poul, go by Miki (he/him)
 - Bsc Software Engineering at CTU in Prague, Czech Republic
@@ -35,6 +40,8 @@ addons:
 - Currently Staff Engineer at Xelix 
 - Maitain several OSS libraries in Python
 
+
+</v-clicks>
 ---
 layout: section
 ---
@@ -45,6 +52,8 @@ layout: section
 
 # What is open source
 
+<v-clicks>
+
 - Source code made available publicly
 - Modification and redistribution under certain conditions
 - Invites collaboration
@@ -54,6 +63,8 @@ layout: section
 - Quite common for
   - operating systems
   - projects
+  
+</v-clicks>
  
 ---
 
@@ -69,6 +80,8 @@ layout: section
 
 # How to share open source
 
+<v-clicks>
+
 - Installable libraries are most commonly shared in repositories
   - tor example PyPI for Python, npmjs for JavaScript
 - Source code is most commonly shared using git
@@ -78,6 +91,7 @@ layout: section
 - Provides access control, issue tracking, wiki, CI and other functionality
 - Most features are free public repositories
 
+</v-clicks>
 --- 
 layout: section
 ---
@@ -88,21 +102,27 @@ layout: section
 
 # Intro to GitHub
 
+<v-clicks>
+
 - *Repository* - a collection of files, main unit on GitHub
 - *Commit* - a change to some number of files
 - *Branch* - collection of commits
 - *Pull Request* - a request to merge one branch into another one
 
+</v-clicks>
 ---
 
 # How to structure a good opensource project on Github?
 
+<v-clicks>
+
 - Linting and formatting
 - Library vs project
 - Good repository structure
-- Dependency management with virtual environments (Python)
+- Dependency management with virtual environments
 - Testing
 - OSS Licenses
+</v-clicks>
 
 ---
 layout: section
@@ -113,6 +133,8 @@ layout: section
 
 # Linting
 
+<v-clicks>
+
 - Linting is analysing and finding issues in code using static code analysis
 - Linters are tools which read the code (without execution) and raise issues
 - Ranges from basic to quite sofisticated
@@ -120,11 +142,14 @@ layout: section
   - check all used code is imported
   - check for inefficient code
 - Better linters even fix the issue for you
+</v-clicks>
 
 ---
 
 # Linting
 ## Reasons to use linters
+
+<v-clicks>
 
 - To enforce standard ways of doing things
 - To keep the codebase consistent
@@ -133,16 +158,20 @@ layout: section
 - To make the code faster
 - To use latest language features
 - To prevent silly mistakes
+</v-clicks>
 
 ---
 
 # Linting
 ## Linters and linting utils
 
+<v-clicks>
+
 - `pre-commit` - tool for running linters before commiting new code
 - `ruff` - new linter which implements most standard Python linters very fast
 - `nbQA` - tool for running linters on jupyter notebooks
 
+</v-clicks>
 --- 
 layout: section
 ---
@@ -158,6 +187,8 @@ layout: section
 
 # Formatting
 
+<v-clicks>
+
 - Each code has some formatting
 - Each programmer writes slightly differently
 - When collaborating, common formatting is important
@@ -166,10 +197,13 @@ layout: section
   - for new collaborators to be able to read code easily
 - Modern way of doing things is to use automated formatters
 
+</v-clicks>
 ---
 
 # Formatting
 ## Automatic formatting
+
+<v-clicks>
 
 - Forever removes the arguments over tiny details
 - Should be run before every commit
@@ -178,6 +212,7 @@ layout: section
   - the only configuration is line length
 - Currently, I would reccommend `ruff format` - compatible with `black` but faster
 
+</v-clicks>
 ---
 
 # Formatting
@@ -223,6 +258,8 @@ layout: section
 
 # Library vs project
 
+<v-clicks>
+
 - Library is some code which provides specific funcionality
   - used as components while building other software
   - for example Pandas, Numpy, Tensorflow, etc.
@@ -231,15 +268,19 @@ layout: section
   - for example Firefox, Blender, VLC media player, etc.
 - Libraries often use more libraries
 - Projects usually use many libraries
+</v-clicks>
 
 ---
 
 # Library vs project
 
+<v-clicks>
+
 - Both libraries and projects can be open source
 - Similar principles apply for sharing and collaborating
 - Major diffences come when it comes to publishing
 
+</v-clicks>
 ---
 layout: section
 ---
@@ -250,11 +291,14 @@ layout: section
 
 # Good repository structure
 
+<v-clicks>
+
 - Important to make collaboration easier
   - easier for new collaborators to explore and navigate
   - easier to decide where new code should go
   - easier to maintain long term
 - Can make publishing and testing easier
+</v-clicks>
 
 ---
 
@@ -271,6 +315,8 @@ layout: section
 # Good repository structure
 ## README
 
+<v-clicks>
+
 - The first thing most people see
 - Usually written in Markdown
 - Should contain
@@ -280,10 +326,14 @@ layout: section
   - typical development tasks
 - Larger projects have dedicated READMEs for changelog and contributing
 
+</v-clicks>
+
 ---
 
 # Good repository structure
 ## Configuration files
+
+<v-clicks>
 
 - Version control configuration)
   - `.gitignore`
@@ -293,17 +343,21 @@ layout: section
   - `.pre-commit-config.yaml`, `pyproject.toml`
 - CI & Github configuration
   - `.github`
+</v-clicks>
 
 ---
 
 # Good repository structure
 ## Core folders
 
+<v-clicks>
+
 - Primary source code, usually `src/` or `lib/`
   - for python packages often the name of the package, e.g. `pandas`
 - Tests, usually `tests/`
 - Documentation, usually `docs/` or `examples/`
 - Publishing / deployment, `scripts/` or `dist/` or `build/`
+</v-clicks>
 
 ---
 layout: section
@@ -331,23 +385,34 @@ layout: section
 ## Python environments
 
 - ... can be a mess
+
+<v-clicks>
+
 - *In general*, Python packages belong to an environment
 - *In general*, the default is the "global environment"
+</v-clicks>
 
+ 
 ---
 
 # Dependency management with virtual environments
 ## Problems with global environment
+
+<v-clicks>
 
 - The system itself uses Python from global environment
 - Different things you install need different dependencies
 - Different things you install need different Python versions
 - Solution -> "virtual environments"
 
+</v-clicks>
+
 ---
 
 # Dependency management with virtual environments
 ## Virtual environments
+
+<v-clicks>
 
 - A way to separate dependencies between projects
 - **Absolutely** the way to go
@@ -356,13 +421,18 @@ layout: section
 - `python -m venv venv` or `py -3 -m venv venv` (Windows)
 - `source venv/bin/activate` or `venv\Scripts\activate` (Windows)
 
+</v-clicks>
+
 ---
 
 # Dependency management with virtual environments
 ## Defining dependencies
 
+<v-clicks>
+
 - Your project/libraries have dependencies
 - To allow reproducibility, those need to be defined
+</v-clicks>
 
 --- 
 
@@ -404,6 +474,8 @@ $ pip install -r requirements.txt
 # Dependency management with virtual environments
 ## Issues with requirements.txt
 
+<v-clicks>
+
 - Ok, but what version of `pandas`?
   - versions of libraries can have significant differences between versions
   - even `pandas<2` or `pandas>2` can eventually break
@@ -413,21 +485,32 @@ $ pip install -r requirements.txt
   - transitive dependencies can be silently updated changing dependencies.
   - `pip freeze > requirements-all.txt`
 
+</v-clicks>
+
 --- 
 
 # Dependency management with virtual environments
 ## Issues with requirements.txt
 
+
+
 - What if I need some dependencies just for tests?
   - `requirements-test.txt`
   - `requirements-profiling.txt`
   - ...
-- -> Not fit for purpose anymore 
+
+<v-click>
+
+- -> Not fit for purpose anymore
+
+</v-click>
 
 ---
 
 # Dependency management with virtual environments
 ## Defining dependencies - level 3
+
+<v-clicks>
 
 - Using a dependency manager
   - `poetry` / `pipenv` / `uv`
@@ -439,6 +522,8 @@ $ pip install -r requirements.txt
   - manage virtual envs
   - make publishing easier
   - install Python
+
+</v-clicks>
 
 ---
 
@@ -491,18 +576,25 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 # Dependency management with virtual environments
 ## Defining dependencies - level 3
 
+<v-clicks>
+
 - Easier dependency management
 - Easier to produce reproducable builds
+</v-clicks>
 
 ---
 
 # Dependency management with virtual environments
 ## Non-python projects
 
+<v-clicks>
+
 - Most languages have some sort of package manager
 - They differ in functionality by language
 - Some languages have more of a standard manager than others
 - Dependencies will always be an issue, always worth investing into it
+
+</v-clicks>
 
 ---
 layout: section
@@ -515,15 +607,20 @@ layout: section
 # Automated testing
 ## Why testing is important
 
+<v-clicks>
+
 - Increases trust in code
 - Makes it easier to update code
 - Makes it easier to manage a project
 - Serves as additional documentation
+</v-clicks>
 
 ---
 
 # Automated testing
 ## Types of tests
+
+<v-clicks>
 
 - Unit tests
   - test smallest components (functions, methods, classes)
@@ -533,24 +630,31 @@ layout: section
   - test integration of components
 - End-to-end tests
   - test full application on all levels
+</v-clicks>
 
 ---
 
 # Automated testing
 ## Continuous integration
 
+<v-clicks>
+
 - CI is a set of tools to run tests automatically
 - For example running tests on code in pull requests
 - Can be checking linting and formatting as well
+</v-clicks>
 
 ---
 
 # Automated testing
 ## Pytest
 
+<v-clicks>
+
 - Python's inbuilt solution is hard to use
 - Pytest is an alternative open source solution
 - Simpler setup and easier to write tests
+</v-clicks>
 
 ---
 
@@ -587,6 +691,8 @@ layout: section
 
 # OSS Licenses
 
+<v-clicks>
+
 - Define the conditions under which the software is shared
 - Differ in restrictiveness
 - Copyleft vs permissive
@@ -595,6 +701,7 @@ layout: section
 - Packages in Python ecosystem primarily use permissive (~70%)
   - MIT is the most popular choice
 - https://choosealicense.com/ 
+</v-clicks>
 
 ---
 layout: section
