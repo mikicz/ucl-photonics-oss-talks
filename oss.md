@@ -54,10 +54,10 @@ addons:
 # Successes of open source in research
 
 - Opensource has allowed for successful international research collaborations
-- In AI -> PyTorch, Tensorflow, Gymnasium (RL), Llama...
+- In Mathematics -> Numpy
+- In AI -> PyTorch, Tensorflow, Gymnasium (RL)
 - In Neuroscience -> Fruit Fly Brain Observatory
 - In Biochemistry -> alphafold
-- *TBD: more examples?*
 
 ---
 
