@@ -457,9 +457,12 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 ---
 
 # Dependency management with virtual environments
-## What about non-python projects?
+## Non-python projects
 
-*TBD: add tips or tool name for Matlab, C, C++...*
+- Most languages have some sort of package manager
+- They differ in functionality by language
+- Some languages have more of a standard manager than others
+- Dependencies will always be an issue, always worth investing into it
 
 ---
 
