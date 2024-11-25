@@ -466,7 +466,70 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 
 ---
 
-# Testing
+# Automated testing
+## Why testing is important
+
+- Increases trust in code
+- Makes it easier to update code
+- Makes it easier to manage a project
+- Serves as additional documentation
+
+---
+
+# Automated testing
+## Types of tests
+
+- Unit tests
+  - test smallest components (functions, methods, classes)
+  - verify the core logic
+  - test various edge cases
+- Integration tests
+  - test integration of components
+- End-to-end tests
+  - test full application on all levels
+
+---
+
+# Automated testing
+## Continuous integration
+
+- CI is a set of tools to run tests automatically
+- For example running tests on code in pull requests
+- Can be checking linting and formatting as well
+
+---
+
+# Automated testing
+## Pytest
+
+- Python's inbuilt solution is hard to use
+- Pytest is an alternative open source solution
+- Simpler setup and easier to write tests
+
+---
+
+# Automated testing
+## Pytest example
+
+```python
+class Cat:
+    def make_sound(self) -> str:
+        return "mňau"
+```
+
+```python
+def test_cat_sound() -> None:
+    assert Cat().make_sound() == "mňau"
+```
+
+```python
+@pytest.fixture
+def cat() -> Cat:
+    return Cat()
+
+def test_cat_sound(cat: Cat) -> None:
+    assert cat.make_sound() == "mňau"
+```
 
 ---
 
