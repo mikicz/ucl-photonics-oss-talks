@@ -36,6 +36,12 @@ addons:
 - Maitain several OSS libraries in Python
 
 ---
+layout: section
+---
+
+# Open source
+
+---
 
 # What is open source
 
@@ -73,6 +79,12 @@ addons:
 - Most features are free public repositories
 
 --- 
+layout: section
+---
+
+# GitHub
+
+---
 
 # Intro to GitHub
 
@@ -92,6 +104,11 @@ addons:
 - Testing
 - OSS Licenses
 
+---
+layout: section
+---
+
+# Linting
 ---
 
 # Linting
@@ -127,6 +144,11 @@ addons:
 - `nbQA` - tool for running linters on jupyter notebooks
 
 --- 
+layout: section
+---
+
+# Formatting
+---
 
 # Formatting
 
@@ -192,6 +214,12 @@ if __name__ == "__main__":
 ```
 
 ---
+layout: section
+---
+
+# Library vs project
+
+---
 
 # Library vs project
 
@@ -211,6 +239,12 @@ if __name__ == "__main__":
 - Both libraries and projects can be open source
 - Similar principles apply for sharing and collaborating
 - Major diffences come when it comes to publishing
+
+---
+layout: section
+---
+
+# Repository structure
 
 ---
 
@@ -270,6 +304,12 @@ if __name__ == "__main__":
 - Tests, usually `tests/`
 - Documentation, usually `docs/` or `examples/`
 - Publishing / deployment, `scripts/` or `dist/` or `build/`
+
+---
+layout: section
+---
+
+# Dependency management with virtual environments
 
 ---
 
@@ -465,6 +505,12 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 - Dependencies will always be an issue, always worth investing into it
 
 ---
+layout: section
+---
+
+# Automated Testing
+
+---
 
 # Automated testing
 ## Why testing is important
@@ -530,6 +576,12 @@ def cat() -> Cat:
 def test_cat_sound(cat: Cat) -> None:
     assert cat.make_sound() == "mňau"
 ```
+
+---
+layout: section
+---
+
+# OSS Licenses
 
 ---
 
