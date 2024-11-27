@@ -6,6 +6,8 @@ highlighter: shiki
 favicon: '/favicon.png'
 fonts:
   sans: "Barlow"
+addons:
+  - slidev-component-progress
 ---
 
 # **Good practices for making reproducible open source code** 
@@ -52,18 +54,21 @@ fonts:
 # Successes of open source in research
 
 - Opensource has allowed for successful international research collaborations
-- In AI -> PyTorch, Tensorflow, Gymnasium (RL), Llama...
+- In Mathematics -> Numpy
+- In AI -> PyTorch, Tensorflow, Gymnasium (RL)
 - In Neuroscience -> Fruit Fly Brain Observatory
 - In Biochemistry -> alphafold
-- *TBD: more examples?*
 
 ---
 
-# Intro to GitHub
+# How to share open source
 
-- GitHub is the most popular platform for working with git
-  - Other popular choices are GitLab and BitBucket
+- Installable libraries are most commonly shared in repositories
+  - tor example PyPI for Python, npmjs for JavaScript
+- Source code is most commonly shared using git
 - Git is a distributed version control system
+- GitHub is the most popular platform for working with git
+  - other popular choices are GitLab and BitBucket
 - Provides access control, issue tracking, wiki, CI and other functionality
 - Most features are free public repositories
 
@@ -94,9 +99,9 @@ fonts:
 - Linting is analysing and finding issues in code using static code analysis
 - Linters are tools which read the code (without execution) and raise issues
 - Ranges from basic to quite sofisticated
-  - Check no line has training spaces
-  - Check all used code is imported
-  - Checking for inefficient code
+  - check no line has training spaces
+  - check all used code is imported
+  - check for inefficient code
 - Better linters even fix the issue for you
 
 ---
@@ -104,13 +109,14 @@ fonts:
 # Linting
 ## Reasons to use linters
 
-- Enforce ways of doing things
-- Keeping the codebase consistent
-- Reduce bugs
-- Make pull requests easier
-- Make the code faster
-- Use latest Python features
-- Prevent silly mistakes
+- To enforce standard ways of doing things
+- To keep the codebase consistent
+- To reduce bugs
+- To make pull requests easier
+- To make the code faster
+- To use latest language features
+- To prevent silly mistakes
+
 ---
 
 # Linting
@@ -134,10 +140,9 @@ fonts:
 - Each programmer writes slightly differently
 - When collaborating, common formatting is important
   - for the code to work correctly
-  - for pull requests to be readable
-  - for new collaborators to be able to read all code easily
-  - *TBD*
-- Modern way of doing things is to have automated formatters
+  - for pull requests to be readable and easier to manage
+  - for new collaborators to be able to read code easily
+- Modern way of doing things is to use automated formatters
 
 ---
 
@@ -148,7 +153,7 @@ fonts:
 - Should be run before every commit
 - Should be enforced on GitHub through CI
 - In Python, very popular choice is `black`
-  - The only configuration is line length
+  - the only configuration is line length
 - Currently, I would reccommend `ruff format` - compatible with `black` but faster
 
 ---
@@ -159,15 +164,15 @@ fonts:
 ```python
 if (__name__ == "__main__"):
 
-    for name, position in [
-        ("Mikuláš", "Staff Engineer"),
+    for (library, purpose) in [
+        ("pandas", "dataframes"),
         (
-            "Robert", "VP of Engineering"
+            "numpy", "multi-dimensional arrays"
         ),
-("Rob", "Senion Engineer")
+("tensorflow", "deep learning")
                 ]:
         print(
-          name, position
+          library, purpose
         )
 ```
 
@@ -178,21 +183,93 @@ if (__name__ == "__main__"):
 
 ```python
 if __name__ == "__main__":
-    for name, position in [
-        ("Mikuláš", "Staff Engineer"),
-        ("Robert", "VP of Engineering"),
-        ("Rob", "Senion Engineer"),
+    for library, purpose in [
+        ("pandas", "dataframes"),
+        ("numpy", "multi-dimensional arrays"),
+        ("tensorflow", "deep learning"),
     ]:
-        print(name, position)
+        print(library, purpose)
 ```
 
 ---
 
 # Library vs project
 
+- Library is some code which provides specific funcionality
+  - used as components while building other software
+  - for example Pandas, Numpy, Tensorflow, etc.
+- Project is standalone piece of software designed
+  - used directly by end user 
+  - for example Firefox, Blender, VLC media player, etc.
+- Libraries often use more libraries
+- Projects usually use many libraries
+
+---
+
+# Library vs project
+
+- Both libraries and projects can be open source
+- Similar principles apply for sharing and collaborating
+- Major diffences come when it comes to publishing
+
 ---
 
 # Good repository structure
+
+- Important to make collaboration easier
+  - easier for new collaborators to explore and navigate
+  - easier to decide where new code should go
+  - easier to maintain long term
+- Can make publishing and testing easier
+
+---
+
+# Good repository structure
+
+- Root of the repository should contain
+  - README, LICENSE
+  - configuration files
+  - few core folders
+  - TBD main entry point
+
+---
+
+# Good repository structure
+## README
+
+- The first thing most people see
+- Usually written in Markdown
+- Should contain
+  - what does it do
+  - how to install it
+  - basic usage
+  - typical development tasks
+- Larger projects have dedicated READMEs for changelog and contributing
+
+---
+
+# Good repository structure
+## Configuration files
+
+- Version control configuration)
+  - `.gitignore`
+- Dependency management files
+  - `requirements.txt`, `pyproject.toml`
+- Code style & linting configuration
+  - `.pre-commit-config.yaml`, `pyproject.toml`
+- CI & Github configuration
+  - `.github`
+
+---
+
+# Good repository structure
+## Core folders
+
+- Primary source code, usually `src/` or `lib/`
+  - for python packages often the name of the package, e.g. `pandas`
+- Tests, usually `tests/`
+- Documentation, usually `docs/` or `examples/`
+- Publishing / deployment, `scripts/` or `dist/` or `build/`
 
 ---
 
@@ -288,12 +365,12 @@ $ pip install -r requirements.txt
 ## Issues with requirements.txt
 
 - Ok, but what version of `pandas`?
-  - Versions of libraries can have significant differences between versions
-  - Even `pandas<2` or `pandas>2` can eventually break
+  - versions of libraries can have significant differences between versions
+  - even `pandas<2` or `pandas>2` can eventually break
 - What about the dependencies of `pandas`?
-  - A dependency of `pandas` can break `pandas` itself 
-  - If not listed what version should be installed?
-  - Transitive dependencies can be silently updated changing dependencies.
+  - a dependency of `pandas` can break `pandas` itself 
+  - if not listed what version should be installed?
+  - transitive dependencies can be silently updated changing dependencies.
   - `pip freeze > requirements-all.txt`
 
 --- 
@@ -315,13 +392,13 @@ $ pip install -r requirements.txt
 - Using a dependency manager
   - `poetry` / `pipenv` / `uv`
 - Usual features
-  - Define top-level dependencies
-  - Split dependencies into groups
-  - All (including transitive) dependencies and versions in a lock file
+  - define top-level dependencies
+  - split dependencies into groups
+  - all (including transitive) dependencies and versions in a lock file
 - They often do extra stuff
-  - Manage virtual envs
-  - Make publishing easier
-  - Install Python
+  - manage virtual envs
+  - make publishing easier
+  - install Python
 
 ---
 
@@ -380,13 +457,79 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 ---
 
 # Dependency management with virtual environments
-## What about non-python projects?
+## Non-python projects
 
-*TBD: add tips or tool name for Matlab, C, C++...*
+- Most languages have some sort of package manager
+- They differ in functionality by language
+- Some languages have more of a standard manager than others
+- Dependencies will always be an issue, always worth investing into it
 
 ---
 
-# Testing
+# Automated testing
+## Why testing is important
+
+- Increases trust in code
+- Makes it easier to update code
+- Makes it easier to manage a project
+- Serves as additional documentation
+
+---
+
+# Automated testing
+## Types of tests
+
+- Unit tests
+  - test smallest components (functions, methods, classes)
+  - verify the core logic
+  - test various edge cases
+- Integration tests
+  - test integration of components
+- End-to-end tests
+  - test full application on all levels
+
+---
+
+# Automated testing
+## Continuous integration
+
+- CI is a set of tools to run tests automatically
+- For example running tests on code in pull requests
+- Can be checking linting and formatting as well
+
+---
+
+# Automated testing
+## Pytest
+
+- Python's inbuilt solution is hard to use
+- Pytest is an alternative open source solution
+- Simpler setup and easier to write tests
+
+---
+
+# Automated testing
+## Pytest example
+
+```python
+class Cat:
+    def make_sound(self) -> str:
+        return "mňau"
+```
+
+```python
+def test_cat_sound() -> None:
+    assert Cat().make_sound() == "mňau"
+```
+
+```python
+@pytest.fixture
+def cat() -> Cat:
+    return Cat()
+
+def test_cat_sound(cat: Cat) -> None:
+    assert cat.make_sound() == "mňau"
+```
 
 ---
 
@@ -395,9 +538,15 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 - Define the conditions under which the software is shared
 - Differ in restrictiveness
 - Copyleft vs permissive
-  - Copyleft requires keeping same license for derivitive work (e.g. GPL, AGPL)
-  - Permissive lets you do lot more (MIT, Apache, BSD)
+  - copyleft requires keeping same license for derivitive work (e.g. GPL, AGPL)
+  - permissive lets you do lot more (MIT, Apache, BSD)
 - Packages in Python ecosystem primarily use permissive (~70%)
   - MIT is the most popular choice
 - https://choosealicense.com/ 
+
+---
+layout: section
+---
+
+# Workshop
 

@@ -4661,6 +4661,11 @@ slash@^5.1.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-5.1.0.tgz#be3adddcdf09ac38eebe8dcdc7b1a57a75b095ce"
   integrity sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==
 
+slidev-component-progress@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/slidev-component-progress/-/slidev-component-progress-1.1.0.tgz#7fb5c189cccde01dbceb935d53faf664de0525be"
+  integrity sha512-E7PmSvZh5RzjrumzzLE2xx/ooxQl5dO40dgPw1V/b9m+Y6P61Sv2om07ffP3G9oVmYV7cKMe1nH0yD2NrCBL+A==
+
 slidev-theme-dracula@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/slidev-theme-dracula/-/slidev-theme-dracula-0.2.0.tgz#15802c504e8d7dc58db9d3d80138b39e9595d984"
