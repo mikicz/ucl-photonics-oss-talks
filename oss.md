@@ -39,7 +39,8 @@ addons:
 - Msc Data Science at UCL (graduated 2019)
 - 10+ years professional experience in Python
 - Currently Staff Engineer at Xelix 
-- Maitain several OSS libraries in Python
+- Coached several data scientists on their engineering skills
+- Maitain several OSS & internal libraries in Python
 
 
 </v-clicks>
@@ -60,11 +61,11 @@ layout: section
 - Modification and redistribution under certain conditions
 - Invites collaboration
 - Extremely common for
-  - programming languages
-  - libraries
+  - programming languages (Python, Rust)
+  - libraries (Numpy, PyTorch)
 - Quite common for
-  - operating systems
-  - projects
+  - operating systems (Linux)
+  - projects (Blender)
   
 </v-clicks>
  
@@ -116,7 +117,7 @@ layout: section
 
 ---
 
-# How to structure a good opensource project on Github?
+# How to structure a good open source project on GitHub?
 
 <v-clicks>
 
@@ -316,12 +317,11 @@ layout: section
 ---
 
 # Good repository structure
+# Root of the repository contents
 
-- Root of the repository should contain
-  - README, LICENSE
-  - configuration files
-  - few core folders
-  - TBD main entry point
+- README, LICENSE
+- configuration files
+- few core folders
 
 ---
 
@@ -348,13 +348,13 @@ layout: section
 
 <v-clicks>
 
-- Version control configuration)
+- Version control configuration
   - `.gitignore`
 - Dependency management files
   - `requirements.txt`, `pyproject.toml`
 - Code style & linting configuration
   - `.pre-commit-config.yaml`, `pyproject.toml`
-- CI & Github configuration
+- CI & GitHub configuration
   - `.github`
 
 </v-clicks>
@@ -400,10 +400,10 @@ layout: section
 ## Python environments
 
 - ... can be a mess
+- *In general*, Python packages belong to an environment
 
 <v-clicks>
 
-- *In general*, Python packages belong to an environment
 - *In general*, the default is the "global environment"
 
 </v-clicks>
@@ -416,7 +416,7 @@ layout: section
 
 <v-clicks>
 
-- The system itself uses Python from global environment
+- The system itself often uses Python from global environment
 - Different things you install need different dependencies
 - Different things you install need different Python versions
 - Solution -> "virtual environments"
@@ -460,8 +460,7 @@ layout: section
 
 Just include it in the README, awful, but better than nothing.
 
-```markdown
--- README.md 
+```markdown 
 
 ## Dependencies
 
@@ -499,7 +498,7 @@ $ pip install -r requirements.txt
 - What about the dependencies of `pandas`?
   - a dependency of `pandas` can break `pandas` itself 
   - if not listed what version should be installed?
-  - transitive dependencies can be silently updated changing dependencies.
+  - transitive dependencies can be silently updated changing dependencies
   - `pip freeze > requirements-all.txt`
 
 </v-clicks>
@@ -536,9 +535,9 @@ $ pip install -r requirements.txt
   - split dependencies into groups
   - all (including transitive) dependencies and versions in a lock file
 - They often do extra stuff
-  - manage virtual envs
+  - manage virtual environments
   - make publishing easier
-  - install Python
+  - install Python itself
 
 </v-clicks>
 
@@ -547,8 +546,14 @@ $ pip install -r requirements.txt
 # Dependency management with virtual environments
 ## Using poetry
 
+<v-clicks>
+
 - `poetry add pandas`
 - `poetry add 'pytest>8' --dev`
+
+</v-clicks>
+
+<v-click>
 
 ```toml
 [tool.poetry]
@@ -560,6 +565,8 @@ pandas = "^2.2.3"
 [tool.poetry.group.dev.dependencies]
 pytest = ">8"
 ```
+
+</v-click>
 
 ---
 
@@ -672,7 +679,7 @@ layout: section
 
 <v-clicks>
 
-- Python's inbuilt solution is hard to use
+- Python's inbuilt testing solution (`unittest`) is hard to use
 - Pytest is an alternative open source solution
 - Simpler setup and easier to write tests
 
@@ -682,6 +689,8 @@ layout: section
 
 # Automated testing
 ## Pytest example
+
+<v-clicks>
 
 ```python
 class Cat:
@@ -702,6 +711,8 @@ def cat() -> Cat:
 def test_cat_sound(cat: Cat) -> None:
     assert cat.make_sound() == "mňau"
 ```
+
+</v-clicks>
 
 ---
 layout: section
