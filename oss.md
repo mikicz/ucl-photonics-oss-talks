@@ -116,7 +116,7 @@ layout: section
 
 <v-clicks>
 
-- Linting and formatting
+- Formatting and linting
 - Library vs project
 - Good repository structure
 - Dependency management with virtual environments
@@ -124,54 +124,6 @@ layout: section
 - OSS Licenses
 </v-clicks>
 
----
-layout: section
----
-
-# Linting
----
-
-# Linting
-
-<v-clicks>
-
-- Linting is analysing and finding issues in code using static code analysis
-- Linters are tools which read the code (without execution) and raise issues
-- Ranges from basic to quite sofisticated
-  - check no line has training spaces
-  - check all used code is imported
-  - check for inefficient code
-- Better linters even fix the issue for you
-</v-clicks>
-
----
-
-# Linting
-## Reasons to use linters
-
-<v-clicks>
-
-- To enforce standard ways of doing things
-- To keep the codebase consistent
-- To reduce bugs
-- To make pull requests easier
-- To make the code faster
-- To use latest language features
-- To prevent silly mistakes
-</v-clicks>
-
----
-
-# Linting
-## Linters and linting utils
-
-<v-clicks>
-
-- `pre-commit` - tool for running linters before commiting new code
-- `ruff` - new linter which implements most standard Python linters very fast
-- `nbQA` - tool for running linters on jupyter notebooks
-
-</v-clicks>
 --- 
 layout: section
 ---
@@ -247,6 +199,55 @@ if __name__ == "__main__":
     ]:
         print(library, purpose)
 ```
+
+---
+layout: section
+---
+
+# Linting
+---
+
+# Linting
+
+<v-clicks>
+
+- Linting is analysing and finding issues in code using static code analysis
+- Linters are tools which read the code (without execution) and raise issues
+- Ranges from basic to quite sofisticated
+  - check no line has training spaces
+  - check all used code is imported
+  - check for inefficient code
+- Better linters even fix the issue for you
+</v-clicks>
+
+---
+
+# Linting
+## Reasons to use linters
+
+<v-clicks>
+
+- To enforce standard ways of doing things
+- To keep the codebase consistent
+- To reduce bugs
+- To make pull requests easier
+- To make the code faster
+- To use latest language features
+- To prevent silly mistakes
+</v-clicks>
+
+---
+
+# Linting
+## Linters and linting utils
+
+<v-clicks>
+
+- `pre-commit` - tool for running linters before commiting new code
+- `ruff` - new linter which implements most standard Python linters very fast
+- `nbQA` - tool for running linters on jupyter notebooks
+
+</v-clicks>
 
 ---
 layout: section
