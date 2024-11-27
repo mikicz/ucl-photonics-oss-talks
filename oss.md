@@ -25,6 +25,7 @@ addons:
 - There is a software engineering skill gap between accademia and industry
 - This workshop aims at teaching you good software engineering practices
 - These skills will improve the quality of your projects, and foster collaboration
+
 </v-clicks>
 
 --- 
@@ -42,6 +43,7 @@ addons:
 
 
 </v-clicks>
+
 ---
 layout: section
 ---
@@ -92,6 +94,7 @@ layout: section
 - Most features are free public repositories
 
 </v-clicks>
+
 --- 
 layout: section
 ---
@@ -110,6 +113,7 @@ layout: section
 - *Pull Request* - a request to merge one branch into another one
 
 </v-clicks>
+
 ---
 
 # How to structure a good opensource project on Github?
@@ -122,6 +126,7 @@ layout: section
 - Dependency management with virtual environments
 - Testing
 - OSS Licenses
+
 </v-clicks>
 
 --- 
@@ -150,6 +155,7 @@ layout: section
 - Modern way of doing things is to use automated formatters
 
 </v-clicks>
+
 ---
 
 # Formatting
@@ -165,6 +171,7 @@ layout: section
 - Currently, I would reccommend `ruff format` - compatible with `black` but faster
 
 </v-clicks>
+
 ---
 
 # Formatting
@@ -218,6 +225,7 @@ layout: section
   - check all used code is imported
   - check for inefficient code
 - Better linters even fix the issue for you
+
 </v-clicks>
 
 ---
@@ -234,6 +242,7 @@ layout: section
 - To make the code faster
 - To use latest language features
 - To prevent silly mistakes
+
 </v-clicks>
 
 ---
@@ -269,6 +278,7 @@ layout: section
   - for example Firefox, Blender, VLC media player, etc.
 - Libraries often use more libraries
 - Projects usually use many libraries
+
 </v-clicks>
 
 ---
@@ -282,6 +292,7 @@ layout: section
 - Major diffences come when it comes to publishing
 
 </v-clicks>
+
 ---
 layout: section
 ---
@@ -299,6 +310,7 @@ layout: section
   - easier to decide where new code should go
   - easier to maintain long term
 - Can make publishing and testing easier
+
 </v-clicks>
 
 ---
@@ -344,6 +356,7 @@ layout: section
   - `.pre-commit-config.yaml`, `pyproject.toml`
 - CI & Github configuration
   - `.github`
+
 </v-clicks>
 
 ---
@@ -358,6 +371,7 @@ layout: section
 - Tests, usually `tests/`
 - Documentation, usually `docs/` or `examples/`
 - Publishing / deployment, `scripts/` or `dist/` or `build/`
+
 </v-clicks>
 
 ---
@@ -391,6 +405,7 @@ layout: section
 
 - *In general*, Python packages belong to an environment
 - *In general*, the default is the "global environment"
+
 </v-clicks>
 
  
@@ -433,6 +448,7 @@ layout: section
 
 - Your project/libraries have dependencies
 - To allow reproducibility, those need to be defined
+
 </v-clicks>
 
 --- 
@@ -581,6 +597,7 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 
 - Easier dependency management
 - Easier to produce reproducable builds
+
 </v-clicks>
 
 ---
@@ -614,6 +631,7 @@ layout: section
 - Makes it easier to update code
 - Makes it easier to manage a project
 - Serves as additional documentation
+
 </v-clicks>
 
 ---
@@ -631,6 +649,7 @@ layout: section
   - test integration of components
 - End-to-end tests
   - test full application on all levels
+
 </v-clicks>
 
 ---
@@ -643,6 +662,7 @@ layout: section
 - CI is a set of tools to run tests automatically
 - For example running tests on code in pull requests
 - Can be checking linting and formatting as well
+
 </v-clicks>
 
 ---
@@ -655,6 +675,7 @@ layout: section
 - Python's inbuilt solution is hard to use
 - Pytest is an alternative open source solution
 - Simpler setup and easier to write tests
+
 </v-clicks>
 
 ---
@@ -702,6 +723,7 @@ layout: section
 - Packages in Python ecosystem primarily use permissive (~70%)
   - MIT is the most popular choice
 - https://choosealicense.com/ 
+
 </v-clicks>
 
 ---
