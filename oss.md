@@ -65,7 +65,7 @@ layout: section
   - libraries (Numpy, PyTorch)
 - Quite common for
   - operating systems (Linux)
-  - projects (Blender)
+  - projects (Spyder)
   
 </v-clicks>
  
@@ -337,6 +337,7 @@ layout: section
   - how to install it
   - basic usage
   - typical development tasks
+  - information about formatting and linting
 - Larger projects have dedicated READMEs for changelog and contributing
 
 </v-clicks>
@@ -736,6 +737,12 @@ layout: section
 - https://choosealicense.com/ 
 
 </v-clicks>
+
+---
+layout: section
+---
+
+# Questions
 
 ---
 layout: section
