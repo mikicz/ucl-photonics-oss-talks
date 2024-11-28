@@ -73,11 +73,16 @@ layout: section
 
 # Successes of open source in research
 
-- Opensource has allowed for successful international research collaborations
-- In Mathematics -> Numpy
+- Open source has allowed for successful international research collaborations
+
+<v-clicks>
+
+- In Mathematics -> Numpy, Scipy
 - In AI -> PyTorch, Tensorflow, Gymnasium (RL)
 - In Neuroscience -> Fruit Fly Brain Observatory
 - In Biochemistry -> alphafold
+
+</v-clicks>
 
 ---
 
