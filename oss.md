@@ -91,7 +91,7 @@ layout: section
 <v-clicks>
 
 - Installable libraries are most commonly shared in repositories
-  - tor example PyPI for Python, npmjs for JavaScript
+  - for example PyPI for Python, npmjs for JavaScript
 - Source code is most commonly shared using git
 - Git is a distributed version control system
 - GitHub is the most popular platform for working with git
