@@ -750,8 +750,21 @@ layout: section
 # Questions
 
 ---
-layout: section
+layout: two-cols
 ---
 
-# Workshop
+# Links
 
+## Slides
+
+<img src="/oss.svg" style="width: 80%;background-color: white; margin: 5px auto 0;" />
+
+::right::
+
+# &nbsp;
+
+## Contact details
+
+- https://www.mikulaspoul.cz/
+- mikulaspoul@gmail.com
+- mikulas.poul@xelix.com
