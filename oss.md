@@ -174,7 +174,7 @@ layout: section
 - Should be enforced on GitHub through CI
 - In Python, very popular choice is `black`
   - the only configuration is line length
-- Currently, I would reccommend `ruff format` - compatible with `black` but faster
+- Currently, I would reccommend `ruff format` -- compatible with `black` but faster
 
 </v-clicks>
 
@@ -227,7 +227,7 @@ layout: section
 - Linting is analysing and finding issues in code using static code analysis
 - Linters are tools which read the code (without execution) and raise issues
 - Ranges from basic to quite sofisticated
-  - check no line has training spaces
+  - check no line has trailing spaces
   - check all used code is imported
   - check for inefficient code
 - Better linters even fix the issue for you
@@ -338,7 +338,7 @@ layout: section
 - The first thing most people see
 - Usually written in Markdown
 - Should contain
-  - what does it do
+  - what does this project/library do
   - how to install it
   - basic usage
   - typical development tasks
