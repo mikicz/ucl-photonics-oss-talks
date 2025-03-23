@@ -5,8 +5,8 @@
   "author": "Mikuláš Poul <mikulaspoul@gmail.com>",
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
-    "@slidev/cli": "^0.49.10",
-    "playwright-chromium": "^1.48.2",
+    "@slidev/cli": "^51.4.0",
+    "playwright-chromium": "^1.51.1",
     "slidev-component-progress": "^1.1.0",
     "slidev-theme-dracula": "^0.2.0"
   },
