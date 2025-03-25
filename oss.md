@@ -97,7 +97,7 @@ layout: section
 - GitHub is the most popular platform for working with git
   - other popular choices are GitLab and BitBucket
 - Provides access control, issue tracking, wiki, CI and other functionality
-- Most features are free public repositories
+- Most features are free on public repositories
 
 </v-clicks>
 
@@ -105,15 +105,15 @@ layout: section
 layout: section
 ---
 
-# GitHub
+# git / GitHub
 
 ---
 
-# Intro to GitHub
+# Intro to git / GitHub
 
 <v-clicks>
 
-- *Repository* - a collection of files, main unit on GitHub
+- *Repository* - a collection of files, main unit in git
 - *Commit* - a change to some number of files
 - *Branch* - collection of commits
 - *Pull Request* - a request to merge one branch into another one
@@ -144,7 +144,7 @@ layout: section
 
 # Formatting
 
-<img src="https://i.imgur.com/vOWAAUK.png" alt="Python Environment" style="max-width: 75%; margin: 0 auto;">
+<img src="./tabs_vs_spaces.png" alt="Python Environment" style="max-width: 75%; margin: 0 auto;">
 
 ---
 
@@ -279,7 +279,7 @@ layout: section
 - Library is some code which provides specific funcionality
   - used as components while building other software
   - for example Pandas, Numpy, Tensorflow, etc.
-- Project is standalone piece of software designed
+- Project is a standalone piece of software
   - used directly by end user 
   - for example Firefox, Blender, VLC media player, etc.
 - Libraries often use more libraries
@@ -398,7 +398,7 @@ layout: section
 # Dependency management with virtual environments
 ## Python environments
 
-<img src="https://imgs.xkcd.com/comics/python_environment_2x.png" alt="Python Environment" style="max-width: 45%; margin: 0 auto;">
+<img src="./python_environment_2x.png" alt="Python Environment" style="max-width: 45%; margin: 0 auto;">
 
 ---
 
